@@ -1,0 +1,35 @@
+@use "../abstracts/" as *;
+
+.button {
+  display: inline-flex;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 1;
+  border: 0;
+  font-weight: $fw-700;
+
+  // should abstract out in sizes
+  padding: 1.125em 2em;
+  transition: background-color 250ms ease, color 250ms ease;
+
+  &[data-type="accent"] {
+    background-color: clr(accent, 400);
+    color: clr(neutral, 900);
+  }
+
+  &[data-type="outline"] {
+    // should abstract out in sizes
+    --outline-size: 5px;
+
+    background-color: transparent;
+    outline: var(--outline-size) solid clr(neutral, 100);
+    outline-offset: calc(var(--outline-size) * -1);
+    color: clr(neutral, 100);
+  }
+
+  &:is(:hover, :focus) {
+    background-color: clr(neutral, 100);
+    color: clr(neutral, 900);
+  }
+}

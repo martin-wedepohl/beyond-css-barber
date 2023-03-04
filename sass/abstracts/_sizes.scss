@@ -1,0 +1,25 @@
+$sizes: (
+  48: 3rem,
+  36: 2.25rem,
+  32: 2rem,
+  24: 1.5rem,
+  20: 1.25rem,
+  16: 1rem,
+  12: 0.75rem,
+  8: 0.5rem,
+);
+
+$hero-padding: clamp(15rem, 15vh, 20rem);
+$section-padding: clamp(3rem, 10vh, 7rem);
+
+$card-body-padding: clamp(2rem, 3.5vw, 5rem);
+
+// Could uses size(24) & size(16)
+// and @use "functions" as *
+// as an alternative
+$grid-gap: 1.5rem;
+$flex-group-gap: 1rem;
+
+$container-max-width-wide: 75rem;
+$container-max-width: 60rem;
+$container-inline-padding: 1rem;
